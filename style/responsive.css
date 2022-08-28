@@ -1,0 +1,188 @@
+@media (max-width: 1100px) {
+  .my-information p {
+    padding: 0 4rem;
+  }
+  .container {
+    max-width: 900px;
+  }
+  .project {
+    width: 18rem;
+    height: 20rem;
+  }
+  .image-overlay,
+  .project-image {
+    height: 14rem;
+  }
+}
+@media (max-width: 850px) {
+  .nav {
+    display: block;
+    background-color: var(--navbg-white-mode);
+  }
+  .menu {
+    display: block;
+    /* padding: 2rem 0; */
+    height: 3.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    height: 0;
+    /* background-color: var(--navbg-white-mode); */
+    /* box-shadow: var(--shadow); */
+    transition: var(--common-transition);
+    padding-right: 0;
+  }
+
+  .show-links {
+    height: 20rem;
+  }
+  .introduction {
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    letter-spacing: 0.2rem;
+  }
+  .name {
+    font-size: 2rem;
+  }
+  .hirebtn {
+    letter-spacing: 0.12rem;
+    font-size: 0.9rem;
+  }
+  .my-socialmedia {
+    right: 5px;
+    bottom: 5px;
+  }
+  .social-handle {
+    padding: 0.5rem 0.45rem;
+    font-size: 1.4rem;
+  }
+  .social-handles li {
+    /* border-radius: 10px;
+    border: 2px solid var(--main-clr); */
+  }
+  .social-handle:hover {
+    color: var(--text-clr);
+  }
+  .section-2 {
+    height: unset;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  /* .my-information {
+    margin-top: 0.7rem;
+  } */
+  .my-information p {
+    font-size: 0.9rem;
+    padding: 0 4rem;
+    margin-top: 0.6rem;
+    line-height: 1.5rem;
+  }
+  .contact-form {
+    max-width: 23rem;
+  }
+  .form-input {
+    letter-spacing: 0.1rem;
+  }
+  .footer {
+    /* font-size: 0.4rem; */
+    height: 2.5rem;
+  }
+  .text-footer {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 565px) {
+  .introduction {
+    font-size: 1rem;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+  }
+  .name {
+    font-size: 1.4rem;
+  }
+  .hirebtn {
+    font-size: 0.7rem;
+  }
+
+  .social-handle {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.35rem;
+    /* color: var(--main-clr); */
+  }
+
+  .social-handles li {
+    /* margin-top: 0.1rem; */
+  }
+  .social-handles li:hover {
+    transform: none;
+  }
+  .firstParagraph {
+    font-weight: unset;
+  }
+
+  .my-information p {
+    font-size: 0.7rem;
+    padding: 0 2rem;
+  }
+  .container {
+    max-width: 500px;
+  }
+  .project {
+    height: 19rem;
+    width: 16rem;
+  }
+  .project-image,
+  .image-overlay {
+    height: 13rem;
+  }
+  .preview-site button {
+    font-size: 0.7rem;
+    padding: 0.6rem 0.7rem;
+  }
+  .contact-form {
+    max-width: 15rem;
+  }
+  .form-input {
+    font-size: 0.7rem;
+  }
+  .submit {
+    padding: 0.3rem 3rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 380px) {
+  .introduction {
+    font-size: 0.6rem;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+  .hirebtn {
+    font-size: 0.5rem;
+  }
+  .social-handle {
+    font-size: 0.6rem;
+  }
+  h2 {
+    font-size: 0.9rem;
+  }
+  .my-information {
+    /* margin-top: 0.8rem; */
+  }
+  .my-information p {
+    font-size: 0.55rem;
+    padding: 0 1.5rem;
+    line-height: 1rem;
+  }
+  .social-handles li {
+    border: none;
+    margin-top: 0.1rem;
+  }
+  .contact-form {
+    max-width: 14rem;
+  }
+}

@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+:root {
+  --body-bg-clr: rgb(255, 252, 252);
+  --main-clr: #2bb9f1;
+  --main-clr-hover: #1d92c1;
+  --main-clr-2: rgb(237, 61, 170);
+  --proj-hover-clr: rgba(0, 255, 208, 0.882);
+  --main-clr-2-hover: rgb(205, 39, 141);
+  --navbg-white-mode: rgb(209, 229, 238);
+  --text-clr: black;
+  --btn-padding: 0.6rem 0.9rem;
+
+  --btn-radius: 0.6rem;
+  --hover-bg-btn-clr: rgb(142, 201, 229);
+  --icon-size: 1rem;
+  --nav-size: 1rem;
+  --h1-size: 2rem;
+  --other-heading: 1.5rem;
+  --btn-hover: rgba(0, 0, 0, 0.112);
+  --common-transition: all 0.5s ease-in-out;
+  /* --shadow: 1px 1px 1px red; */
+  --shadow: 0px 6px 40px #605757;
+  --darkmode-btn-bg: rgba(255, 255, 255, 0.507);
+  /* --margin: 1rem; */
+  --transformY: translateY(-5px);
+  --btn-transformY: translateY(25px);
+  --btn2-hover-mainclr: #5fbfe6;
+  --btn-2-3-clr: #e740bd;
+  --btn-2-3-hover-clr: #dc60bd;
+  --btn-shadow: -5px 4px 30px rgba(38, 35, 35, 0.46);
+}
+.dark-mode {
+  --body-bg-clr: rgb(22, 20, 20);
+  --shadow: 0px 6px 40px #ede7e779;
+  --navbg-white-mode: rgb(0, 36, 54);
+  --text-clr: white;
+  --darkmode-btn-bg: rgb(65, 59, 59);
+  --btn2-hover-mainclr: #127aa3;
+  --btn-shadow: -5px 4px 30px rgba(193, 189, 189, 0.448);
+  --btn-2-3-hover-clr: #931c75;
+}
+body {
+  text-align: center;
+  background-color: var(--body-bg-clr);
+  color: var(--text-clr);
+}

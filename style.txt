@@ -1,0 +1,108 @@
+//this for style of section-
+
+.container {
+  background-color: var(--navbg-white-mode);
+  /* height: 90vh; */
+  /* padding: 2rem; */
+  /* margin: 0rem 4.2rem 0 4.2rem; */
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid var(--main-clr);
+  border-radius: var(--btn-radius);
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
+  /* overflow-y: hidden;
+  grid-auto-flow: row; */
+}
+.btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  /* z-index: 40;
+  position: fixed; */
+}
+.common-btn {
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  transform: var(--btn-transformY);
+  cursor: pointer;
+  color: var(--text-clr);
+  border: 1px solid var(--text-clr);
+}
+.btn-1,
+.btn-3 {
+  background-color: var(--btn-2-3-clr);
+}
+.btn-1:hover,
+.btn-3:hover {
+  background-color: var(--btn-2-3-hover-clr);
+  transition: var(--common-transition);
+}
+.btn-2 {
+  background-color: var(--main-clr);
+}
+
+.btn-2:hover {
+  background-color: var(--btn2-hover-mainclr);
+  transition: var(--common-transition);
+}
+.active-btn {
+  /* transform: var(--btn-transformY); */
+  transition: var(--common-transition);
+  box-shadow: var(--btn-shadow);
+  transform: translateY(15px);
+}
+.projects {
+  /* margin: 0.8rem 0; */
+  display: grid;
+  /* gap: 25px; */
+  row-gap: 15px;
+  /* column-gap: 20px; */
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: grid;
+}
+.project {
+  height: 17rem;
+  width: 12rem;
+  border: 1px solid var(--text-clr);
+  border-radius: var(--btn-radius);
+  margin: 0.3rem 2rem;
+  cursor: pointer;
+  background-color: var(--navbg-white-mode);
+}
+.project-image {
+  height: 10rem;
+  width: 12rem;
+  padding: 0.3rem;
+  border-radius: var(--btn-radius);
+}
+.opacity {
+  background-color: var(--text-clr);
+  margin: 0.7rem 0;
+  opacity: 0.5;
+}
+.project a {
+  color: var(--text-clr);
+  text-decoration: none;
+}
+h4 {
+  /* text-transform: capitalize; */
+  font-size: 1rem;
+}
+.project:hover {
+  border: 1px solid var(--btn-2-3-clr);
+  transition: var(--common-transition);
+  box-shadow: var(--btn-shadow);
+  transform: var(--transformY);
+}
+
+.project a:hover {
+  color: var(--main-clr);
+  transition: var(--common-transition);
+}

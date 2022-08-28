@@ -1,0 +1,119 @@
+ //this is under section-3
+ 
+ <div class="container">
+        <div class="projects">
+          <div class="project">
+            <img
+              src="./images/website-1.jpg"
+              class="project-image"
+              alt="Project-facebook"
+            />
+            <div class="project-info">
+              <a href="facebook.com"> <h4>Facebook.com</h4></a>
+              <hr class="opacity" />
+              <a href="https://www.facebook.com">
+                <i class="material-icons" id="globe">public</i>
+              </a>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./images/website-1.jpg"
+              class="project-image"
+              alt="Project-facebook"
+            />
+            <div class="project-info">
+              <a href="facebook.com"> <h4>Facebook.com</h4></a>
+              <hr class="opacity" />
+              <a href="https://www.facebook.com">
+                <i class="material-icons" id="globe">public</i>
+              </a>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./images/website-1.jpg"
+              class="project-image"
+              alt="Project-facebook"
+            />
+            <div class="project-info">
+              <a href="facebook.com"> <h4>Facebook.com</h4></a>
+              <hr class="opacity" />
+              <a href="https://www.facebook.com">
+                <i class="material-icons" id="globe">public</i>
+              </a>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./images/website-1.jpg"
+              class="project-image"
+              alt="Project-facebook"
+            />
+            <div class="project-info">
+              <a href="facebook.com"> <h4>Facebook.com</h4></a>
+              <hr class="opacity" />
+              <a href="https://www.facebook.com">
+                <i class="material-icons" id="globe">public</i>
+              </a>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./images/website-1.jpg"
+              class="project-image"
+              alt="Project-facebook"
+            />
+            <div class="project-info">
+              <a href="facebook.com"> <h4>Facebook.com</h4></a>
+              <hr class="opacity" />
+              <a href="https://www.facebook.com">
+                <i class="material-icons" id="globe">public</i>
+              </a>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./images/website-1.jpg"
+              class="project-image"
+              alt="Project-facebook"
+            />
+            <div class="project-info">
+              <a href="facebook.com"> <h4>Facebook.com</h4></a>
+              <hr class="opacity" />
+              <a href="https://www.facebook.com">
+                <i class="material-icons" id="globe">public</i>
+              </a>
+            </div>
+          </div>
+          <div class="project">
+            <img
+              src="./images/website-1.jpg"
+              class="project-image"
+              alt="Project-facebook"
+            />
+            <div class="project-info">
+              <a href="facebook.com"> <h4>Facebook.com</h4></a>
+              <hr class="opacity" />
+              <a href="https://www.facebook.com">
+                <i class="material-icons" id="globe">public</i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      //this is for button
+        <div class="btns">
+        <button type="button" class="btn-1 common-btn active-btn" data-id="all">
+          All
+        </button>
+        <button type="button" class="btn-2 common-btn" data-id="javascript">
+          JavaScript
+        </button>
+        <button type="button" class="btn-3 common-btn" data-id="wordpress">
+          Wordpress
+        </button>
+      </div>
