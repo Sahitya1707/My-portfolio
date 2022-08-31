@@ -70,13 +70,14 @@ previews.forEach(function (e, i) {
     galleryImage.forEach(function (e) {
       e.addEventListener(`click`, function () {
         e.classList.add("gallery-border");
-        console.log(e);
+        // console.log(e);
         e.classList.remove("gallery-opacity");
-        console.log(bigImage[index]);
+        // console.log(bigImage[index]);
         if (e.classList.contains("gallery-border")) {
           bigImage[index].src = e.src;
         }
         galleryImage.forEach(function (e) {
+          console.log(galleryImage[index]);
           if (bigImage[index].src !== e.src) {
             e.classList.remove("gallery-border");
             e.classList.add("gallery-opacity");

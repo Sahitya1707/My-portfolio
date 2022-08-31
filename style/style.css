@@ -500,11 +500,12 @@ h4 {
 }
 .body-background-preview {
   overflow: hidden;
-  position: fixed;
+  position: static;
 
   /* overflow: hidden;*/
 
-  background-image: url(../images/Background/back.jpg);
+  /* background-image: url(../images/Background/back.jpg); */
+  background-color: #5fbfe6;
 }
 
 .cross-preview .material-icons {
