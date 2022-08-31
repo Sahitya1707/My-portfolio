@@ -8,6 +8,13 @@ const dark = document.querySelector(".dark");
 const btnHire = document.querySelector(".hirebtn");
 const section4 = document.querySelector(".section-4");
 const navLink = document.querySelectorAll(".nav-link");
+const previews = document.querySelectorAll(".preview");
+const previewOpen = document.querySelectorAll(".preview-open");
+const crossPreview = document.querySelectorAll(".cross-preview");
+const fullBody = document.querySelector("body");
+let bigImage = document.querySelectorAll(".preview-image");
+let galleryImage = document.querySelectorAll(".gallery");
+
 function navHideAndShow() {
   navLinks.classList.toggle("show-links");
   cross.classList.toggle("hidden");
@@ -43,45 +50,58 @@ btnHire.addEventListener("click", function (e) {
   section4.scrollIntoView({ behavior: `smooth` });
 });
 navLinks.addEventListener("click", function (e) {
-  // console.log(e);
   e.preventDefault();
   if (e.target.classList.contains("nav-link")) {
     const id = e.target.getAttribute("href");
-    // console.log(id);
-    // console.log(document.querySelector(id));
+
     document.querySelector(id).scrollIntoView({ behavior: `smooth` });
   }
   if (e.target.classList.contains("resume-btn")) {
     window.open("portfolio.pdf");
   }
 });
-// fade animation
 
-// This is for contact form
-// function sendEmail() {
-//   Email.send({
-//     Host: "smtp.elasticemail.com",
-//     Username: "neupanesahitya1@gmail.com",
-//     Password: "5B6419559B7D161913AC2275FC2CF9A572FE",
-//     To: "neupanesahitya1@gmail.com",
-//     From: document.getElementById("email").value,
-//     Subject: "New Contact Form",
-//     Body:
-//       "Name :" +
-//       document.getElementById("fullName").value +
-//       "<br/>" +
-//       document.getElementById(`text`).value,
-//   }).then((message) => alert(message));
-// }
-// function sendMail() {
-//   let contact = {
-//     from_name: document.getElementById("fullName").value,
-//     email_id: document.getElementById("email").value,
-//     message: document.getElementById("text").value,
-//   };
-//   emailjs
-//     .send("gmail", "service_psk031r", "template_yjxhp3w", contact)
-//     .then(function (res) {
-//       alert("Email Successfully send!" + res.status);
-//     });
-// }
+previews.forEach(function (e, i) {
+  e.addEventListener("click", function () {
+    let index = i;
+    // big image change open
+    previewOpen[index].classList.remove("hidden");
+    fullBody.classList.add("body-background-preview");
+    galleryImage.forEach(function (e) {
+      e.addEventListener(`click`, function () {
+        e.classList.add("gallery-border");
+        console.log(e);
+        e.classList.remove("gallery-opacity");
+        console.log(bigImage[index]);
+        if (e.classList.contains("gallery-border")) {
+          bigImage[index].src = e.src;
+        }
+        galleryImage.forEach(function (e) {
+          if (bigImage[index].src !== e.src) {
+            e.classList.remove("gallery-border");
+            e.classList.add("gallery-opacity");
+          }
+        });
+      });
+    });
+  });
+});
+
+// for preview close
+crossPreview.forEach(function (e, i) {
+  e.addEventListener("click", function () {
+    previewOpen[i].classList.add(`hidden`);
+    fullBody.classList.remove("body-background-preview");
+  });
+  document.addEventListener(`keydown`, function (e) {
+    if ((e.key = `Escape` && !previewOpen[i].classList.contains("hidden"))) {
+      previewOpen[i].classList.add("hidden");
+      fullBody.classList.remove("body-background-preview");
+    }
+  });
+});
+
+// document.addEventListener("keydown", function (e) {
+//   if (e.key === "Escape" && !previewOpen.classList.contains("hidden")) {
+//   }
+// });
