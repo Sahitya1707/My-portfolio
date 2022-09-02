@@ -49,9 +49,10 @@ body {
   background-color: var(--body-bg-clr);
   color: var(--text-clr);
 }
+
 .section-2,
-.section-2,
-.section-3 {
+.section-3,
+.section-4 {
   padding-top: 3.5rem;
 }
 .nav {
@@ -250,6 +251,9 @@ h2 {
   letter-spacing: 0.2rem;
   margin-top: 1.5rem;
 }
+.my-information {
+  max-width: 100rem;
+}
 
 .my-information p {
   padding: 0 7rem;
@@ -268,12 +272,88 @@ h2 {
   font-weight: 600;
 }
 .resume a {
-  color: var(--main-clr);
+  color: var(--main-clr-2);
   text-decoration: none;
 }
 .resume a:hover {
   text-decoration: underline;
   transition: var(--common-transition);
+}
+.skills {
+  width: 100%;
+  /* height: 32vh; */
+}
+h3 {
+  color: var(--main-clr);
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  margin-top: 1rem;
+}
+.progress-bar {
+  text-align: left;
+  /* padding: 0 7rem; */
+}
+.info span {
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  color: var(--txt-clr);
+}
+.progress-bar {
+  margin-top: 1rem;
+  border: 2px solid var(--text-clr);
+  margin: 1rem 7rem 0 7rem;
+  border-radius: 1rem;
+  /* max-width: 100rem; */
+}
+.bars {
+  width: 34rem;
+  margin: auto;
+  max-width: 40rem;
+}
+.progress-bar .bar {
+  margin: 2rem 0;
+}
+/* .progress-bar .bar:first-child {
+  margin-top: 1rem;
+} */
+.progress-bar .bar .progress-line {
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background-color: var(--navbg-white-mode);
+  margin-top: 5px;
+  border-radius: 10px;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line span {
+  height: 100%;
+  /* width: 10%; */
+  background-color: var(--main-clr-2);
+  position: absolute;
+  border-radius: 10px;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.progress-line.html span {
+  width: 70%;
+}
+.progress-line.css span {
+  width: 60%;
+}
+.progress-line.javascript span {
+  width: 30%;
+}
+.progress-line.c-programming span {
+  width: 70%;
 }
 /* .container {
   background-color: var(--navbg-white-mode);
@@ -371,10 +451,7 @@ h4 {
   color: var(--main-clr);
   transition: var(--common-transition);
 } */
-.section-3 {
-  /* max-width: 1200px; */
-  /* max-width: 1200px; */
-}
+
 .container {
   margin: 2rem auto;
   max-width: 1500px;

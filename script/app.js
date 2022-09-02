@@ -93,6 +93,9 @@ crossPreview.forEach(function (e, i) {
   e.addEventListener("click", function () {
     previewOpen[i].classList.add(`hidden`);
     fullBody.classList.remove("body-background-preview");
+    //   for (let j = 0; j <= 15; j + 3) {
+    //     gallery[j].classList.add("gallery-border");
+    //   }
   });
   document.addEventListener(`keydown`, function (e) {
     if ((e.key = `Escape` && !previewOpen[i].classList.contains("hidden"))) {

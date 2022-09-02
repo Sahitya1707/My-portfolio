@@ -1,3 +1,8 @@
+@media (max-width: 1200px) {
+  .bars {
+    width: 27rem;
+  }
+}
 @media (max-width: 1100px) {
   .my-information p {
     padding: 0 4rem;
@@ -15,6 +20,12 @@
   }
   .preview-image {
     width: 70%;
+  }
+  .progress-bar {
+    margin: 1rem 4rem 0 4rem;
+  }
+  .bars {
+    width: 19rem;
   }
 }
 @media (max-width: 850px) {
@@ -117,6 +128,34 @@
   .gallery-border {
     border: 1.5px solid var(--main-clr);
   }
+  .progress-bar {
+    margin: 1rem 4rem 0 4rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  .info span {
+    font-size: 0.9rem;
+  }
+  .bars {
+    width: 21.5rem;
+  }
+  .progress-bar .bar {
+    margin: 1.5rem 0;
+  }
+}
+@media (max-width: 730px) {
+  .progress-bar {
+    border: none;
+    margin: 0;
+  }
+  .bars {
+    padding: 0 4rem;
+    width: 100%;
+  }
+  .progress-bar .bar .progress-line {
+    height: 7px;
+  }
 }
 @media (max-width: 565px) {
   .introduction {
@@ -200,6 +239,19 @@
     height: 5rem;
     margin-bottom: 1rem;
   }
+  .info span {
+    font-size: 0.7rem;
+  }
+  .progress-bar .bar {
+    margin: 0.9rem 0;
+  }
+
+  .bars {
+    padding: 0 2rem;
+  }
+  .progress-bar .bar .progress-line {
+    height: 5px;
+  }
 }
 @media (max-width: 380px) {
   .introduction {
@@ -255,5 +307,14 @@
     margin-top: 2rem;
     width: 3.5rem;
     height: 3.5rem;
+  }
+  .progress-bar .bar {
+    margin: 0.7rem 0;
+  }
+  h3 {
+    font-size: 0.7rem;
+  }
+  .info span {
+    font-size: 0.55rem;
   }
 }
