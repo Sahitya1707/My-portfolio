@@ -60,7 +60,7 @@ body {
 }
 .section-hidden {
   opacity: 0;
-  transform: translateY(8rem);
+  transform: translateY(7rem);
 }
 .nav {
   width: 100%;
