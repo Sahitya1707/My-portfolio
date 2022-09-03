@@ -7,10 +7,12 @@
 :root {
   --body-bg-clr: rgb(255, 252, 252);
   --main-clr: #2bb9f1;
-  --main-clr-hover: #1d92c1;
-  --main-clr-2: rgb(237, 61, 170);
-  --proj-hover-clr: rgba(0, 255, 208, 0.882);
-  --main-clr-2-hover: rgb(205, 39, 141);
+  --main-clr-hover: #1c9ed2;
+  --main-clr-2: rgb(19 219 186);
+  /* --main-clr-2: rgb(207 219 19); */
+  --proj-hover-clr: rgb(207 219 10 / 80%);
+  /* --main-clr-2-hover: rgb(174, 185, 17); */
+  --main-clr-2-hover: rgb(20, 200, 170);
   --navbg-white-mode: rgb(209, 229, 238);
   --text-clr: black;
   --btn-padding: 0.6rem 0.9rem;
