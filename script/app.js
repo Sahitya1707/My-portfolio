@@ -1,3 +1,4 @@
+const allSection = document.querySelectorAll("#section");
 const bars = document.querySelector(".bars");
 const cross = document.querySelector(".cross");
 const navLinks = document.querySelector(".nav-links");
@@ -6,7 +7,7 @@ const mode = document.querySelector(".btn-mode");
 const body = document.querySelector("body");
 const dark = document.querySelector(".dark");
 const btnHire = document.querySelector(".hirebtn");
-const section4 = document.querySelector(".section-4");
+
 const navLink = document.querySelectorAll(".nav-link");
 const previews = document.querySelectorAll(".preview");
 const previewOpen = document.querySelectorAll(".preview-open");
@@ -14,6 +15,10 @@ const crossPreview = document.querySelectorAll(".cross-preview");
 const fullBody = document.querySelector("body");
 let bigImage = document.querySelectorAll(".preview-image");
 let galleryImage = document.querySelectorAll(".gallery");
+// const skills = document.querySelector(`.skills`);
+const progressLine = document.querySelectorAll(".progress-line");
+const progressLineSpan = document.querySelectorAll(".progress-line span");
+console.log(progressLineSpan);
 
 function navHideAndShow() {
   navLinks.classList.toggle("show-links");
@@ -109,3 +114,58 @@ crossPreview.forEach(function (e, i) {
 //   if (e.key === "Escape" && !previewOpen.classList.contains("hidden")) {
 //   }
 // });
+
+// Reveal things on scroll
+const observer = new IntersectionObserver(
+  (entries) => {
+    console.log(entries[2]);
+    entries.forEach((entry) => {
+      if (entry.isIntersecting === true) {
+        entry.target.classList.remove("section-hidden");
+      }
+      if (
+        entry.target.classList.contains("skills") &&
+        entry.isIntersecting === true
+      ) {
+        console.log(`hello`);
+
+        console.log(progressLine);
+        progressLine.forEach(function (entries) {
+          console.log(entries);
+          entries.style.animation =
+            "animate 1s cubic-bezier(1, 0, 0.5, 1) forwards";
+        });
+        progressLineSpan.forEach(function (entries) {
+          console.log(entries);
+          entries.style.animation =
+            "animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards";
+        });
+        // progressLine.style.
+      }
+    });
+    // console.log(entries[2]);
+    // if (entries[2].isIntersecting === true) {
+    //   console.log("hello");
+    // } else {
+    //   return;
+    // }
+  },
+  {
+    threshold: 0.1,
+  }
+);
+// console.log(allSection);
+allSection.forEach(function (section) {
+  observer.observe(section);
+});
+observer.observe(allSection[2]);
+
+// const newAnimation = new IntersectionObserver((entriesAnimation) => {
+//   console.log(entriesAnimation);
+//   if (entriesAnimation.isVisible === true) {
+//     console.log(`hello`);
+//   } else {
+//     return;
+//   }
+// });
+// newAnimation.observe(allSection[2]);
