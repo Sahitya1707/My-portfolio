@@ -1,4 +1,4 @@
-const allSection = document.querySelectorAll("#section");
+const allSection = document.querySelectorAll(".section");
 const bars = document.querySelector(".bars");
 const cross = document.querySelector(".cross");
 const navLinks = document.querySelector(".nav-links");
@@ -18,7 +18,6 @@ let galleryImage = document.querySelectorAll(".gallery");
 // const skills = document.querySelector(`.skills`);
 const progressLine = document.querySelectorAll(".progress-line");
 const progressLineSpan = document.querySelectorAll(".progress-line span");
-console.log(progressLineSpan);
 
 function navHideAndShow() {
   navLinks.classList.toggle("show-links");
@@ -118,7 +117,6 @@ crossPreview.forEach(function (e, i) {
 // Reveal things on scroll
 const observer = new IntersectionObserver(
   (entries) => {
-    console.log(entries[2]);
     entries.forEach((entry) => {
       if (entry.isIntersecting === true) {
         entry.target.classList.remove("section-hidden");
@@ -140,15 +138,8 @@ const observer = new IntersectionObserver(
           entries.style.animation =
             "animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards";
         });
-        // progressLine.style.
       }
     });
-    // console.log(entries[2]);
-    // if (entries[2].isIntersecting === true) {
-    //   console.log("hello");
-    // } else {
-    //   return;
-    // }
   },
   {
     threshold: 0.1,

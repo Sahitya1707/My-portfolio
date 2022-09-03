@@ -55,7 +55,7 @@ body {
 .section-4 {
   padding-top: 3.5rem;
 }
-#section {
+.section {
   transition: transform 1s, opacity 1s;
 }
 .section-hidden {
