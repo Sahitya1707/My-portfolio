@@ -37,17 +37,17 @@ function transitionMode() {
 }
 // for light mode
 light.addEventListener("click", function () {
-  body.classList.remove("dark-mode");
+  body.classList.add("dark-mode");
   transitionMode();
-  light.classList.add("hidden");
-  dark.classList.remove("hidden");
+  light.classList.toggle("hidden");
+  dark.classList.toggle("hidden");
 });
 // for dark mode
 dark.addEventListener("click", function () {
   dark.classList.add("hidden");
   transitionMode();
   light.classList.remove("hidden");
-  body.classList.add("dark-mode");
+  body.classList.remove("dark-mode");
 });
 btnHire.addEventListener("click", function (e) {
   console.log(e);
