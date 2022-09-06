@@ -318,12 +318,7 @@ h2 {
   width: 100%;
   /* height: 32vh; */
 }
-/* h3 {
-  color: var(--main-clr);
-  font-size: 1.5rem;
-  letter-spacing: 0.2rem;
-  margin-top: 1rem;
-} */
+
 .progress-bar {
   text-align: left;
   /* padding: 0 7rem; */
@@ -390,102 +385,6 @@ h2 {
 .progress-line.c-programming span {
   width: 70%;
 }
-/* .container {
-  background-color: var(--navbg-white-mode);
-
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
-  border: 1px solid var(--main-clr);
-  border-radius: var(--btn-radius);
-  padding-bottom: 4rem;
-  margin-bottom: 4rem;
- 
-}
-.btns {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-.common-btn {
-  padding: var(--btn-padding);
-  border-radius: var(--btn-radius);
-  transform: var(--btn-transformY);
-  cursor: pointer;
-  color: var(--text-clr);
-  border: 1px solid var(--text-clr);
-}
-.btn-1,
-.btn-3 {
-  background-color: var(--btn-2-3-clr);
-}
-.btn-1:hover,
-.btn-3:hover {
-  background-color: var(--btn-2-3-hover-clr);
-  transition: var(--common-transition);
-}
-.btn-2 {
-  background-color: var(--main-clr);
-}
-
-.btn-2:hover {
-  background-color: var(--btn2-hover-mainclr);
-  transition: var(--common-transition);
-}
-.active-btn {
-  transition: var(--common-transition);
-  box-shadow: var(--btn-shadow);
-  transform: translateY(15px);
-}
-.projects {
-  display: grid;
-  row-gap: 15px;
-  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  display: grid;
-}
-.project {
-  height: 17rem;
-  width: 12rem;
-  border: 1px solid var(--text-clr);
-  border-radius: var(--btn-radius);
-  margin: 0.3rem 2rem;
-  cursor: pointer;
-  background-color: var(--navbg-white-mode);
-}
-.project-image {
-  height: 10rem;
-  width: 12rem;
-  padding: 0.3rem;
-  border-radius: var(--btn-radius);
-}
-.opacity {
-  background-color: var(--text-clr);
-  margin: 0.7rem 0;
-  opacity: 0.5;
-}
-.project a {
-  color: var(--text-clr);
-  text-decoration: none;
-}
-h4 {
-  font-size: 1rem;
-}
-.project:hover {
-  border: 1px solid var(--btn-2-3-clr);
-  transition: var(--common-transition);
-  box-shadow: var(--btn-shadow);
-  transform: var(--transformY);
-}
-
-.project a:hover {
-  color: var(--main-clr);
-  transition: var(--common-transition);
-} */
 
 .container {
   margin: 2rem auto;

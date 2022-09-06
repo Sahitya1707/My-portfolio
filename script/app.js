@@ -97,9 +97,6 @@ crossPreview.forEach(function (e, i) {
   e.addEventListener("click", function () {
     previewOpen[i].classList.add(`hidden`);
     fullBody.classList.remove("body-background-preview");
-    //   for (let j = 0; j <= 15; j + 3) {
-    //     gallery[j].classList.add("gallery-border");
-    //   }
   });
   document.addEventListener(`keydown`, function (e) {
     if ((e.key = `Escape` && !previewOpen[i].classList.contains("hidden"))) {
@@ -108,11 +105,6 @@ crossPreview.forEach(function (e, i) {
     }
   });
 });
-
-// document.addEventListener("keydown", function (e) {
-//   if (e.key === "Escape" && !previewOpen.classList.contains("hidden")) {
-//   }
-// });
 
 // Reveal things on scroll
 const observer = new IntersectionObserver(
@@ -150,13 +142,3 @@ allSection.forEach(function (section) {
   observer.observe(section);
 });
 observer.observe(allSection[2]);
-
-// const newAnimation = new IntersectionObserver((entriesAnimation) => {
-//   console.log(entriesAnimation);
-//   if (entriesAnimation.isVisible === true) {
-//     console.log(`hello`);
-//   } else {
-//     return;
-//   }
-// });
-// newAnimation.observe(allSection[2]);
