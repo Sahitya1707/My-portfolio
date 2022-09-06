@@ -7,7 +7,7 @@ const mode = document.querySelector(".btn-mode");
 const body = document.querySelector("body");
 const dark = document.querySelector(".dark");
 const btnHire = document.querySelector(".hirebtn");
-
+const section4 = document.querySelector("#section-4");
 const navLink = document.querySelectorAll(".nav-link");
 const previews = document.querySelectorAll(".preview");
 const previewOpen = document.querySelectorAll(".preview-open");

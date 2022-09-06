@@ -318,12 +318,12 @@ h2 {
   width: 100%;
   /* height: 32vh; */
 }
-h3 {
+/* h3 {
   color: var(--main-clr);
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   margin-top: 1rem;
-}
+} */
 .progress-bar {
   text-align: left;
   /* padding: 0 7rem; */
