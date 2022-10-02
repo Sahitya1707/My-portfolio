@@ -1,3 +1,98 @@
+let card = document.querySelector(".projects");
+
+const project = [
+  {
+    siteAddress: `https://stopwatch-proj.netlify.app/`,
+    previewImage1: `./images/website-1/website-1(a).jpg`,
+  },
+  {
+    siteAddress: `https://www.sahityaneupane.com.np/`,
+    previewImage1: `./images/website-2/website-2(a).jpg`,
+  },
+  {
+    siteAddress: `https://www.sahityaneupane.com.np/`,
+    previewImage1: `./images/website-3/website-3(a).jpg`,
+    previewImage2: `./images/website-3/website-3(b).jpg`,
+    previewImage3: `./images/website-3/website-3(c).jpg`,
+  },
+  {
+    siteAddress: `https://www.sahityaneupane.com.np/`,
+    previewImage1: `./images/website-4/website-4(a).jpg`,
+    previewImage2: `./images/website-4/website-4(b).jpg`,
+    previewImage3: `./images/website-4/website-4(c).jpg`,
+  },
+  {
+    siteAddress: `https://www.sahityaneupane.com.np/`,
+    previewImage1: `./images/website-5/website-5(a).jpg`,
+    previewImage2: `./images/website-5/website-5(b).jpg`,
+    previewImage3: `./images/website-5/website-5(c).jpg`,
+  },
+  {
+    siteAddress: `https://www.sahityaneupane.com.np/`,
+    previewImage1: `./images/website-6/website-6(a).jpg`,
+    previewImage2: `./images/website-6/website-6(b).jpg`,
+    previewImage3: `./images/website-6/website-6(c).jpg`,
+  },
+];
+// console.log(project[1].previewImage);
+project.forEach(function (e) {
+  // console.log(e.hasOwnProperty(`previewImage2`));
+  // console.log(i);
+
+  card.innerHTML += `
+   <div class="project section-hidden section">
+            <div class="image-overlay">
+              <img src="${
+                e.previewImage1
+              }" alt="Website name" class="project-image" />
+              <div class="project-information">
+                <p>Html, Css, JavaScript</p>
+              </div>
+            </div>
+            <hr class="line" />
+            <div class="preview-site">
+              <button class="preview">Preview</button>
+
+              <a href="${
+                e.siteAddress
+              }" target="_blank"><button class="site">Visit Site</button></a>
+            </div>
+            <div class="preview-open hidden ">
+              <p class="cross-preview">
+                <i class="material-icons" id="cross">close</i>
+              </p>
+              <div class="website-img">
+                <img src="${
+                  e.previewImage1
+                }" class="preview-image" alt="Website Preview" />
+              </div>
+              <hr class="line" />
+
+              <div class="website-gallery">
+                <div class="gallery-images">
+                  <img src="${
+                    e.previewImage1
+                  }" alt="" class="gallery gallery-border ">
+                  ${
+                    e.hasOwnProperty(`previewImage2`) === true
+                      ? `<img src="${e.previewImage2}" alt="" class="gallery">`
+                      : ` `
+                  }
+                  ${
+                    e.hasOwnProperty(`previewImage3`) === true
+                      ? `<img src="${e.previewImage3}" alt="" class="gallery ">`
+                      : ` `
+                  }
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+  `;
+});
+
 const allSection = document.querySelectorAll(".section");
 const bars = document.querySelector(".bars");
 const cross = document.querySelector(".cross");
@@ -50,7 +145,7 @@ dark.addEventListener("click", function () {
   body.classList.remove("dark-mode");
 });
 btnHire.addEventListener("click", function (e) {
-  console.log(e);
+  // console.log(e);
   section4.scrollIntoView({ behavior: `smooth` });
 });
 navLinks.addEventListener("click", function (e) {
@@ -109,6 +204,7 @@ crossPreview.forEach(function (e, i) {
 // Reveal things on scroll
 const observer = new IntersectionObserver(
   (entries) => {
+    // console.log(entries);
     entries.forEach((entry) => {
       if (entry.isIntersecting === true) {
         entry.target.classList.remove("section-hidden");
@@ -117,16 +213,16 @@ const observer = new IntersectionObserver(
         entry.target.classList.contains("skills") &&
         entry.isIntersecting === true
       ) {
-        console.log(`hello`);
+        // console.log(`hello`);
 
-        console.log(progressLine);
+        // console.log(progressLine);
         progressLine.forEach(function (entries) {
-          console.log(entries);
+          // console.log(entries);
           entries.style.animation =
             "animate 1s cubic-bezier(1, 0, 0.5, 1) forwards";
         });
         progressLineSpan.forEach(function (entries) {
-          console.log(entries);
+          // console.log(entries);
           entries.style.animation =
             "animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards";
         });
