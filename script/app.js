@@ -10,16 +10,16 @@ const project = [
     previewImage1: `./images/website-2/website-2(a).jpg`,
   },
   {
-    siteAddress: `https://www.sahityaneupane.com.np/`,
+    siteAddress: `https://spacexcopy.netlify.app/`,
     previewImage1: `./images/website-3/website-3(a).jpg`,
     previewImage2: `./images/website-3/website-3(b).jpg`,
     previewImage3: `./images/website-3/website-3(c).jpg`,
   },
   {
-    siteAddress: `https://www.sahityaneupane.com.np/`,
+    siteAddress: `https://tictactoeproj.netlify.app/`,
     previewImage1: `./images/website-4/website-4(a).jpg`,
     previewImage2: `./images/website-4/website-4(b).jpg`,
-    previewImage3: `./images/website-4/website-4(c).jpg`,
+    // previewImage3: `./images/website-4/website-4(c).jpg`,
   },
   {
     siteAddress: `https://www.sahityaneupane.com.np/`,
