@@ -6,7 +6,7 @@ const project = [
     previewImage1: `./images/website-1/website-1(a).jpg`,
   },
   {
-    siteAddress: `https://www.sahityaneupane.com.np/`,
+    siteAddress: `https://analog-clock-proj.netlify.app/`,
     previewImage1: `./images/website-2/website-2(a).jpg`,
   },
   {
