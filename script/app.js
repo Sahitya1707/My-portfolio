@@ -22,10 +22,8 @@ const project = [
     // previewImage3: `./images/website-4/website-4(c).jpg`,
   },
   {
-    siteAddress: `https://www.sahityaneupane.com.np/`,
+    siteAddress: `https://weather-app-js-web.netlify.app/`,
     previewImage1: `./images/website-5/website-5(a).jpg`,
-    previewImage2: `./images/website-5/website-5(b).jpg`,
-    previewImage3: `./images/website-5/website-5(c).jpg`,
   },
   {
     siteAddress: `https://www.sahityaneupane.com.np/`,
