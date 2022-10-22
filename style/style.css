@@ -391,8 +391,11 @@ h2 {
   max-width: 1500px;
 }
 .projects {
+  flex-direction: row-reverse;
+  /* flex-basis: revert; */
+  /* align-items: flex-end; */
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   justify-content: space-around;
 
   /* margin-left: auto;
