@@ -26,10 +26,8 @@ const project = [
     previewImage1: `./images/website-5/website-5(a).jpg`,
   },
   {
-    siteAddress: `https://www.sahityaneupane.com.np/`,
+    siteAddress: `https://calculator-js-project-web.netlify.app/`,
     previewImage1: `./images/website-6/website-6(a).jpg`,
-    previewImage2: `./images/website-6/website-6(b).jpg`,
-    previewImage3: `./images/website-6/website-6(c).jpg`,
   },
 ];
 // console.log(project[1].previewImage);
