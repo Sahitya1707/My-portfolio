@@ -395,8 +395,8 @@ h2 {
   /* flex-basis: revert; */
   /* align-items: flex-end; */
   display: flex;
-  flex-wrap: wrap-reverse;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
 
   /* margin-left: auto;
   margin-right: auto; */

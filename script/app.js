@@ -1,6 +1,20 @@
 let card = document.querySelector(".projects");
 
-const project = [
+let moreProject = [
+  {
+    siteAddress: `https://team-ekyam-project.netlify.app/`,
+    previewImage1: `./images/website-7/website-7(a).jpg`,
+    previewImage2: `./images/website-7/website-7(b).jpg`,
+  },
+  {
+    siteAddress: `https://alarmwatch.netlify.app/`,
+    previewImage1: `./images/website-8/website-8(a).jpg`,
+    previewImage2: `./images/website-8/website-8(b).jpg`,
+  },
+];
+// console.log(...moreProject);
+
+let project = [
   {
     siteAddress: `https://stopwatch-proj.netlify.app/`,
     previewImage1: `./images/website-1/website-1(a).jpg`,
@@ -29,14 +43,18 @@ const project = [
     siteAddress: `https://calculator-js-project-web.netlify.app/`,
     previewImage1: `./images/website-6/website-6(a).jpg`,
   },
+  // ...moreProject,
 ];
-// console.log(project[1].previewImage);
-project.forEach(function (e) {
-  // console.log(e.hasOwnProperty(`previewImage2`));
-  // console.log(i);
+// console.log(project);
 
-  card.innerHTML += `
-   <div class="project section-hidden section">
+// console.log(project[1].previewImage);
+function projectShow() {
+  project.forEach(function (e) {
+    // console.log(e.hasOwnProperty(`previewImage2`));
+    // console.log(i);
+
+    card.innerHTML += `
+   <div class="project section">
             <div class="image-overlay">
               <img src="${
                 e.previewImage1
@@ -87,8 +105,9 @@ project.forEach(function (e) {
           </div>
 
   `;
-});
-
+  });
+}
+projectShow();
 const allSection = document.querySelectorAll(".section");
 const bars = document.querySelector(".bars");
 const cross = document.querySelector(".cross");
@@ -100,16 +119,78 @@ const dark = document.querySelector(".dark");
 const btnHire = document.querySelector(".hirebtn");
 const section4 = document.querySelector("#section-4");
 const navLink = document.querySelectorAll(".nav-link");
-const previews = document.querySelectorAll(".preview");
-const previewOpen = document.querySelectorAll(".preview-open");
-const crossPreview = document.querySelectorAll(".cross-preview");
-const fullBody = document.querySelector("body");
-let bigImage = document.querySelectorAll(".preview-image");
-let galleryImage = document.querySelectorAll(".gallery");
-// const skills = document.querySelector(`.skills`);
-const progressLine = document.querySelectorAll(".progress-line");
-const progressLineSpan = document.querySelectorAll(".progress-line span");
+let previews = Array.from(document.querySelectorAll(".preview"));
+// console.log(previews);
+let previewOpen = Array.from(document.querySelectorAll(".preview-open"));
+let crossPreview = Array.from(document.querySelectorAll(".cross-preview"));
 
+let bigImage = Array.from(document.querySelectorAll(".preview-image"));
+let galleryImage = Array.from(document.querySelectorAll(".gallery"));
+
+const progressLine = Array.from(document.querySelectorAll(".progress-line"));
+const progressLineSpan = Array.from(
+  document.querySelectorAll(".progress-line span")
+);
+const fullBody = document.querySelector("body");
+
+const showMore = document.querySelector(".more");
+// console.log(showMore);
+const showLess = document.querySelector(".less");
+// console.log(showLess);
+showMore.addEventListener("click", function () {
+  card.innerHTML = "";
+  showMore.classList.add("hidden");
+  showLess.classList.remove("hidden");
+  // console.log(previews);
+  // console.log(project);
+  project = project.concat(moreProject);
+
+  // let previewsShow = Array.from(document.querySelectorAll(".preview"));
+  // // console.log(previews);
+  // console.log();
+  // console.log(previewsShow);
+  // previewOpen = Array.from(document.querySelectorAll(".preview-open"));
+  // crossPreview = Array.from(document.querySelectorAll(".cross-preview"));
+
+  // bigImage = Array.from(document.querySelectorAll(".preview-image"));
+  // galleryImage = Array.from(document.querySelectorAll(".gallery"));
+  // console.log(project);
+  // console.log(card);
+  // console.log(previews);
+  // console.log(crossPreview);
+  projectShow();
+  previewEqual();
+
+  previewOpenMode();
+
+  previewCloseModal();
+  // showLess.style.transition = "1s ease-in-out";
+  // console.log(card);
+  // console.log(projectShow);
+  // project.push(...moreProject);
+});
+function previewEqual() {
+  previews = Array.from(document.querySelectorAll(".preview"));
+  previewOpen = Array.from(document.querySelectorAll(".preview-open"));
+  crossPreview = Array.from(document.querySelectorAll(".cross-preview"));
+  // console.log(crossPreview);
+
+  bigImage = Array.from(document.querySelectorAll(".preview-image"));
+  galleryImage = Array.from(document.querySelectorAll(".gallery"));
+}
+// console.log(previews);
+
+showLess.addEventListener("click", function () {
+  card.innerHTML = "";
+  card.innerHTML = "";
+  showMore.classList.remove("hidden");
+  showLess.classList.add("hidden");
+  project = project.slice(0, 6);
+  projectShow();
+  previewEqual();
+  previewOpenMode();
+  previewCloseModal();
+});
 function navHideAndShow() {
   navLinks.classList.toggle("show-links");
   cross.classList.toggle("hidden");
@@ -155,48 +236,60 @@ navLinks.addEventListener("click", function (e) {
     window.open("portfolio.pdf");
   }
 });
-
-previews.forEach(function (e, i) {
-  e.addEventListener("click", function () {
-    let index = i;
-    // big image change open
-    previewOpen[index].classList.remove("hidden");
-    fullBody.classList.add("body-background-preview");
-    galleryImage.forEach(function (e) {
-      e.addEventListener(`click`, function () {
-        e.classList.add("gallery-border");
-        // console.log(e);
-        e.classList.remove("gallery-opacity");
-        // console.log(bigImage[index]);
-        if (e.classList.contains("gallery-border")) {
-          bigImage[index].src = e.src;
-        }
-        galleryImage.forEach(function (e) {
-          console.log(galleryImage[index]);
-          if (bigImage[index].src !== e.src) {
-            e.classList.remove("gallery-border");
-            e.classList.add("gallery-opacity");
+function previewOpenMode() {
+  previews.forEach(function (e, i) {
+    e.addEventListener("click", function () {
+      let index = i;
+      // big image change open
+      previewOpen[index].classList.remove("hidden");
+      fullBody.classList.add("body-background-preview");
+      galleryImage.forEach(function (e) {
+        e.addEventListener(`click`, function () {
+          e.classList.add("gallery-border");
+          // console.log(e);
+          e.classList.remove("gallery-opacity");
+          // console.log(bigImage[index]);
+          if (e.classList.contains("gallery-border")) {
+            bigImage[index].src = e.src;
           }
+          galleryImage.forEach(function (e) {
+            // console.log(galleryImage[index]);
+            if (bigImage[index].src !== e.src) {
+              e.classList.remove("gallery-border");
+              e.classList.add("gallery-opacity");
+            }
+          });
         });
       });
     });
   });
-});
-
+}
+previewOpenMode();
+// console.log(project.concat(moreProject));
+// console.log(moreProject);
+// console.log(project);
 // for preview close
-crossPreview.forEach(function (e, i) {
-  e.addEventListener("click", function () {
-    previewOpen[i].classList.add(`hidden`);
-    fullBody.classList.remove("body-background-preview");
-  });
-  document.addEventListener(`keydown`, function (e) {
-    if ((e.key = `Escape` && !previewOpen[i].classList.contains("hidden"))) {
-      previewOpen[i].classList.add("hidden");
+function previewCloseModal() {
+  crossPreview.forEach(function (e, i) {
+    e.addEventListener("click", function () {
+      previewOpen[i].classList.add(`hidden`);
       fullBody.classList.remove("body-background-preview");
-    }
-  });
-});
+    });
+    // have some bug issue
+    // document.addEventListener(`keydown`, function (event) {
+    //   if (
+    //     (event.key = `Escape` && !previewOpen[i].classList.contains("hidden"))
+    //   ) {
+    //     console.log(previewOpen[i]);
+    //     console.log(i);
+    //     previewOpen[i].classList.add("hidden");
 
+    //     fullBody.classList.remove("body-background-preview");
+    //   }
+    // });
+  });
+}
+previewCloseModal();
 // Reveal things on scroll
 const observer = new IntersectionObserver(
   (entries) => {
