@@ -5,11 +5,13 @@ let moreProject = [
     siteAddress: `https://team-ekyam-project.netlify.app/`,
     previewImage1: `./images/website-7/website-7(a).jpg`,
     previewImage2: `./images/website-7/website-7(b).jpg`,
+    projectName: `TEam ekyam project`,
   },
   {
     siteAddress: `https://alarmwatch.netlify.app/`,
     previewImage1: `./images/website-8/website-8(a).jpg`,
     previewImage2: `./images/website-8/website-8(b).jpg`,
+    projectName: `alarm watch`,
   },
 ];
 // console.log(...moreProject);
@@ -18,30 +20,36 @@ let project = [
   {
     siteAddress: `https://stopwatch-proj.netlify.app/`,
     previewImage1: `./images/website-1/website-1(a).jpg`,
+    projectName: `Stopwatch`,
   },
   {
     siteAddress: `https://analog-clock-proj.netlify.app/`,
     previewImage1: `./images/website-2/website-2(a).jpg`,
+    projectName: `Analog Watch`,
   },
   {
     siteAddress: `https://spacexcopy.netlify.app/`,
     previewImage1: `./images/website-3/website-3(a).jpg`,
     previewImage2: `./images/website-3/website-3(b).jpg`,
     previewImage3: `./images/website-3/website-3(c).jpg`,
+    projectName: `SpaceX Clone`,
   },
   {
     siteAddress: `https://tictactoeproj.netlify.app/`,
     previewImage1: `./images/website-4/website-4(a).jpg`,
     previewImage2: `./images/website-4/website-4(b).jpg`,
+    projectName: `Tictac toe`,
     // previewImage3: `./images/website-4/website-4(c).jpg`,
   },
   {
     siteAddress: `https://weather-app-js-web.netlify.app/`,
     previewImage1: `./images/website-5/website-5(a).jpg`,
+    projectName: `Weather app`,
   },
   {
     siteAddress: `https://calculator-js-project-web.netlify.app/`,
     previewImage1: `./images/website-6/website-6(a).jpg`,
+    projectName: `Calculator`,
   },
   // ...moreProject,
 ];
@@ -60,7 +68,8 @@ function projectShow() {
                 e.previewImage1
               }" alt="Website name" class="project-image" />
               <div class="project-information">
-                <p>Html, Css, JavaScript</p>
+                <p>
+              ${e.projectName}</p>
               </div>
             </div>
             <hr class="line" />
