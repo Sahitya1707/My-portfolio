@@ -13,6 +13,13 @@ let moreProject = [
     previewImage2: `./images/website-8/website-8(b).jpg`,
     projectName: `alarm watch`,
   },
+  {
+    siteAddress: `https://tictactoeproj.netlify.app/`,
+    previewImage1: `./images/website-4/website-4(a).jpg`,
+    previewImage2: `./images/website-4/website-4(b).jpg`,
+    projectName: `Tictac toe`,
+    // previewImage3: `./images/website-4/website-4(c).jpg`,
+  },
 ];
 // console.log(...moreProject);
 
@@ -34,13 +41,7 @@ let project = [
     previewImage3: `./images/website-3/website-3(c).jpg`,
     projectName: `SpaceX Clone`,
   },
-  {
-    siteAddress: `https://tictactoeproj.netlify.app/`,
-    previewImage1: `./images/website-4/website-4(a).jpg`,
-    previewImage2: `./images/website-4/website-4(b).jpg`,
-    projectName: `Tictac toe`,
-    // previewImage3: `./images/website-4/website-4(c).jpg`,
-  },
+
   {
     siteAddress: `https://weather-app-js-web.netlify.app/`,
     previewImage1: `./images/website-5/website-5(a).jpg`,
@@ -50,6 +51,11 @@ let project = [
     siteAddress: `https://calculator-js-project-web.netlify.app/`,
     previewImage1: `./images/website-6/website-6(a).jpg`,
     projectName: `Calculator`,
+  },
+  {
+    siteAddress: `https://to-do-js-proj.netlify.app/`,
+    previewImage1: `./images/website-9/website-9(a).jpg`,
+    projectName: `Todo List`,
   },
   // ...moreProject,
 ];
